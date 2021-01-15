@@ -33,8 +33,9 @@ ro.qualcomm.cabl=0
 ro.support_hide_display_cutout=true
 
 # dex2oat64
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.image-dex2oat-cpu-set=4,5,6,7
 dalvik.vm.dex2oat64.enabled=true
-ro.sys.fw.dex2oat_thread_count=8
 
 # Display
 ro.sf.hwc_set_default_colormode=true
