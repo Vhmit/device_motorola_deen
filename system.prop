@@ -44,6 +44,9 @@ pm.dexopt.bg-dexopt=everything
 # Display
 ro.sf.hwc_set_default_colormode=true
 
+# Ebpf
+ro.kernel.ebpf.supported=false
+
 # Media
 media.msm8956hw=0
 mm.enable.smoothstreaming=true
