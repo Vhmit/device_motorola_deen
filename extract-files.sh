@@ -58,6 +58,17 @@ function blob_fixup() {
         vendor/lib/hw/audio.primary.msm8953.so)
             "${PATCHELF}" --replace-needed libcutils.so libprocessgroup.so "${2}"
             ;;
+        # Camera shim
+        product/lib/lib-imscamera.so | product/lib/lib-imsvideocodec.so | product/lib64/lib-imscamera.so)
+            for LIBGUI_SHIM in $(grep -L "libgui_shim.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libgui_shim.so" "${LIBGUI_SHIM}"
+            done
+            ;;
+        vendor/lib/libmot_gpu_mapper.so)
+            for LIBGUI_SHIM in $(grep -L "libgui_shim_vendor.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libgui_shim_vendor.so" "${LIBGUI_SHIM}"
+            done
+            ;;
         # Fix camera recording
         vendor/lib/libmmcamera2_pproc_modules.so)
             sed -i "s/ro.product.manufacturer/ro.product.nopefacturer/" "${2}"
