@@ -253,7 +253,6 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0-service-qti.rc \
     android.hardware.keymaster@4.0.vendor
 
 # LED packages
