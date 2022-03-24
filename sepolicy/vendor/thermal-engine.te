@@ -19,3 +19,4 @@ allow thermal-engine sysfs_devfreq:file rw_file_perms;
 r_dir_file(thermal-engine sysfs_socinfo)
 
 get_prop(thermal-engine, vendor_default_prop)
+dontaudit thermal-engine sysfs:file read;
