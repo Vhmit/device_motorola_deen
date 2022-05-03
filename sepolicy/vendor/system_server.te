@@ -27,3 +27,6 @@ allow system_server sysfs_msm_subsys:file r_file_perms;
 allow system_server sysfs_battery_supply:file r_file_perms;
 
 allow system_server sysfs_batteryinfo:dir r_dir_perms;
+
+# charging switch
+allow system_server sysfs_device_info:file { getattr open read write };

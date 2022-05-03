@@ -24,3 +24,6 @@ dontaudit system_app {
 }:service_manager find;
 
 binder_call(system_app, hal_power_default)
+
+# device info
+allow system_app sysfs_device_info:file r_file_perms;

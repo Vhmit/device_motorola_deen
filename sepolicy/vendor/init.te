@@ -32,3 +32,6 @@ allow init servicemanager:binder { call transfer };
 allow init sysfs_healthd:file setattr;
 allow init fingerprint_device:chr_file { write ioctl };
 allow init sysfs:file setattr;
+
+# charging switch
+allow init sysfs_device_info:file { setattr };

@@ -9,3 +9,11 @@ allow platform_app sysfs_kgsl:lnk_file read;
 get_prop(platform_app, moto_boot_prop)
 get_prop(platform_app, hwrev_prop)
 get_prop(platform_app, camera_prop)
+
+# system info
+allow platform_app sysfs_device_info:dir search;
+allow platform_app sysfs_device_info:file { getattr open read };
+allow platform_app sysfs_device_info:dir search;
+allow platform_app sysfs_device_info:file { getattr open read }; 
+allow platform_app sysfs_device_info:dir search;
+allow platform_app sysfs_device_info:file { getattr open read };
