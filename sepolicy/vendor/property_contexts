@@ -90,3 +90,4 @@ ro.vendor.perf.        u:object_r:vendor_perf_prop:s0
 ro.build.motfactory u:object_r:vendor_radio_prop:s0
 ro.build.vendorprefix u:object_r:vendor_radio_prop:s0
 ro.fsg-id u:object_r:vendor_radio_prop:s0
+persist.ims.regmanager.mode      u:object_r:vendor_radio_prop:s0
