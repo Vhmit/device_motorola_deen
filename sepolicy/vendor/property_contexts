@@ -91,3 +91,6 @@ ro.build.motfactory u:object_r:vendor_radio_prop:s0
 ro.build.vendorprefix u:object_r:vendor_radio_prop:s0
 ro.fsg-id u:object_r:vendor_radio_prop:s0
 persist.ims.regmanager.mode      u:object_r:vendor_radio_prop:s0
+
+# sensor
+sensors.capsense.loopback    u:object_r:moto_sensor_prop:s0
