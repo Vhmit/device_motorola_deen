@@ -2,6 +2,9 @@
 # system props for deen
 #
 
+# ADB
+ro.adb.secure.recovery=0
+
 # ART
 dalvik.vm.dex2oat-filter=quicken
 dalvik.vm.image-dex2oat-filter=quicken
