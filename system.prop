@@ -44,6 +44,9 @@ dalvik.vm.dex2oat64.enabled=true
 pm.dexopt.first-boot=quicken
 pm.dexopt.bg-dexopt=everything
 
+# Disable blur
+ro.launcher.blur.appLaunch=0
+
 # Display
 ro.sf.hwc_set_default_colormode=true
 
