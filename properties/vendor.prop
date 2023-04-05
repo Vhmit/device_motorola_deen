@@ -78,6 +78,9 @@ ro.frp.pst=/dev/block/platform/soc/7824900.sdhci/by-name/frp
 ro.fm.transmitter=false
 ro.vendor.fm.use_audio_session=true
 
+# FS-verity
+ro.apk_verity.mode=2
+
 # Graphics
 ro.hardware.egl=adreno
 ro.hardware.vulkan=msm8953
