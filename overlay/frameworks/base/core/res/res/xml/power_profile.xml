@@ -24,10 +24,12 @@
         <value>8</value>
     </array>
     <array name="cpu.core_speeds.cluster0">
-        <value>652800</value>
+        <value>345600</value>
+        <value>533000</value>
+        <value>729600</value>
         <value>1036800</value>
         <value>1401600</value>
-        <value>1689600</value>
+        <value>1651600</value>
         <value>1804800</value>
         <value>1958400</value>
         <value>2016000</value>
