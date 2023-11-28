@@ -24,8 +24,6 @@
 
 DEVICE_PATH := device/motorola/deen
 
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
-
 BOARD_VENDOR := motorola
 
 # Platform
