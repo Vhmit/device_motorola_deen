@@ -26,8 +26,6 @@ DEVICE_PATH := device/motorola/deen
 
 KERNEL_PATH := device/motorola/deen-kernel
 
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
-
 BOARD_VENDOR := motorola
 
 # Platform
