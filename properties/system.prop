@@ -39,6 +39,10 @@ ro.support_hide_display_cutout=true
 dalvik.vm.dex2oat64.enabled=true
 ro.sys.fw.dex2oat_thread_count=8
 
+# Dexopt
+pm.dexopt.first-boot=quicken
+pm.dexopt.bg-dexopt=everything
+
 # Display
 ro.sf.hwc_set_default_colormode=true
 
