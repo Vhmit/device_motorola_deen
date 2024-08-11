@@ -29,4 +29,7 @@
     <string-array name="config_keyguard_statusbar_icon_blocklist" translatable="false">
         <item>@*android:string/status_bar_call_strength</item>
     </string-array>
+
+    <!-- Doze: does this device support STATE_DOZE? -->
+    <bool name="doze_display_state_supported">true</bool>
 </resources>
