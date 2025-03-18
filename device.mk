@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     FrameworksRes \
     NoCutoutOverlay \
     SettingsRes \
+    SettingsProviderRes \
     SystemUIRes \
     TelephonyRes \
     TetheringConfigOverlay \
