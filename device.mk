@@ -46,16 +46,12 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio.effect@4.0-impl_32 \
-    android.hardware.audio.service_32 \
-    android.hardware.audio@4.0-impl_32 \
-    android.hardware.soundtrigger@2.1-impl_32 \
-    android.hardware.soundtrigger@2.1-service \
+    android.hardware.audio@5.0-impl:32 \
+    android.hardware.audio.service \
+    android.hardware.audio.effect@5.0-impl:32 \
+    android.hardware.soundtrigger@2.2-impl \
     audio.r_submix.default \
     audio.usb.default \
-    audiod \
-    libaacwrapper \
-    libaudio-resampler \
     libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
@@ -88,7 +84,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
     audio.bluetooth.default \
-    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.bluetooth.audio@2.0-impl:32 \
     libbt-vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.fm@1.0.vendor
