@@ -119,9 +119,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0:64 \
     GoogleCameraGoPrebuilt
 
-# QTI Permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml     
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-gcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-gcam.xml
 
 # Codec2 modules
 PRODUCT_PACKAGES += \
