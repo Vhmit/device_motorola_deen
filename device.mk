@@ -339,6 +339,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.0 \
     vendor.qti.hardware.perf@2.0.vendor
 
+# Prebuilt packages
+PRODUCT_PACKAGES += \
+    ViaBrowser
+
 # QCOM
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
