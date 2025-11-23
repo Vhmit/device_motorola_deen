@@ -45,12 +45,6 @@ using android::base::GetProperty;
 int property_set(const char *key, const char *value) {
     return __system_property_set(key, value);
 }
-char const *heapstartsize;
-char const *heapgrowthlimit;
-char const *heapsize;
-char const *heapminfree;
-char const *heapmaxfree;
-char const *heaptargetutilization;
 
 void property_override(char const prop[], char const value[], bool add = true)
 {
@@ -63,50 +57,8 @@ void property_override(char const prop[], char const value[], bool add = true)
     __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void check_device()
-{
-    struct sysinfo sys;
-
-    sysinfo(&sys);
-
-    if (sys.totalram > 5072ull * 1024 * 1024) {
-        // from - phone-xhdpi-6144-dalvik-heap.mk
-        heapstartsize = "16m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heaptargetutilization = "0.5";
-        heapminfree = "8m";
-        heapmaxfree = "32m";
-    } else if (sys.totalram > 3072ull * 1024 * 1024) {
-        // from - phone-xxhdpi-4096-dalvik-heap.mk
-        heapstartsize = "8m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heaptargetutilization = "0.6";
-        heapminfree = "8m";
-        heapmaxfree = "16m";
-    } else {
-        // from - phone-xhdpi-2048-dalvik-heap.mk
-        heapstartsize = "8m";
-        heapgrowthlimit = "192m";
-        heapsize = "512m";
-        heaptargetutilization = "0.75";
-        heapminfree = "512k";
-        heapmaxfree = "8m";
-    }
-}
-
 void vendor_load_properties()
 {
-    check_device();
-
-    property_set("dalvik.vm.heapstartsize", heapstartsize);
-    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_set("dalvik.vm.heapsize", heapsize);
-    property_set("dalvik.vm.heaptargetutilization", heaptargetutilization);
-    property_set("dalvik.vm.heapminfree", heapminfree);
-    property_set("dalvik.vm.heapmaxfree", heapmaxfree);
-
     // Setting carrier prop
     std::string carrier = GetProperty("ro.boot.carrier", "unknown");
     property_override("ro.carrier", carrier.c_str());

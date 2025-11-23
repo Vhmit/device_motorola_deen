@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.msm8953"
+#define LOG_TAG "android.hardware.light@2.0-service.deen"
 
 #include <log/log.h>
 #include <fstream>

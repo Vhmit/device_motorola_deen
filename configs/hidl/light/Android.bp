@@ -14,8 +14,8 @@
 
 cc_binary {
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.msm8953",
-    init_rc: ["android.hardware.light@2.0-service.msm8953.rc"],
+    name: "android.hardware.light@2.0-service.deen",
+    init_rc: ["android.hardware.light@2.0-service.deen.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
 	"libhardware",

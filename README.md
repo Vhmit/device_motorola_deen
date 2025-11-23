@@ -1,8 +1,12 @@
-Device Tree for Motorola One (Deen)
+Copyright (C) 2021 The LineageOS Project
+
+Device Configuration for Motorola One (Deen)
 ===========================================
 
 The Motorola Motorola One (codenamed _"deen"_) is a mid-range smartphone from Motorola mobility.
 It was announced on August 2018.
+
+## Device specifications
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -17,6 +21,6 @@ Battery | Li-Ion 3000mAh battery
 Display | 720 x 1520 pixels, 5.9 inches (~287 ppi pixel density)
 Camera  | 13 MP, 2160 pixels, panorama,depth sensor, PDAF ,flash LED
 
-Copyright 2021 - The LineageOS Project.
+## Device Picture
 
-![Motorola One](https://cdn2.gsmarena.com/vv/pics/motorola/motorola-one-02.jpg "Motorola One")
+![Motorola One](https://files.tecnoblog.net/wp-content/uploads/2025/01/motorola-one-branco.png "Motorola One")

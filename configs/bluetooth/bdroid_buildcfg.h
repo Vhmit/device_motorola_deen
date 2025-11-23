@@ -21,25 +21,12 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
-
-#pragma push_macro("PROPERTY_VALUE_MAX")
-
-#include <cutils/properties.h>
-#include <string.h>
-
-static inline const char* BtmGetDefaultName()
-{
-    return "Motorola One";
-}
-
-#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
-
+#define BTM_DEF_LOCAL_NAME   "Motorola One"
+// Disables read remote device feature
+#define MAX_ACL_CONNECTIONS   16
+#define MAX_L2CAP_CHANNELS    16
 #define BLE_VND_INCLUDED   TRUE
 #define BTIF_HF_WBS_PREFERRED TRUE
 #define BTM_WBS_INCLUDED TRUE
-#define MAX_ACL_CONNECTIONS   16
-#define MAX_L2CAP_CHANNELS    16
-
-#pragma pop_macro("PROPERTY_VALUE_MAX")
 
 #endif

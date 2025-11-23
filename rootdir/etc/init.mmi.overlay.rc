@@ -13,7 +13,6 @@ on property:sys.boot_completed=1
     start capsense_reset
 
 on init
-
    # Change ownership for for HBM feature
    chown system system /sys/class/graphics/fb0/hbm
    # Change ownership for for cabc feature

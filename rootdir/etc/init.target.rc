@@ -96,8 +96,6 @@ on post-fs-data
     mkdir /mnt/vendor/persist/data/sfs 0700 system system
     mkdir /mnt/vendor/persist/data/tz 0700 system system
     mkdir /data/misc/dts 0770 media audio
-#    mkdir /data/vendor/hbtp 0750 system system
-
 
 #Create folder for mm-qcamera-daemon
     mkdir /data/vendor/camera 0770 camera camera
@@ -156,11 +154,6 @@ service vendor.qseecomd /vendor/bin/qseecomd
    user root
    group root
 
-#service aostlmd /system/bin/aostlmd
-#   class late_start
-#   user system
-#   group system net_raw
-
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
    user root
@@ -186,7 +179,6 @@ on boot
     chown system drmrpc /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
-#    chown system system /sys/kernel/hbtp/display_pwr
 
     ####Regionalization config and prop files####
     chmod 0644 /persist/speccfg/spec
@@ -254,12 +246,6 @@ service vendor.imsrcsservice /system/vendor/bin/imsrcsd
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     restart vendor.ims_rtp_daemon
-
-#service hbtp /system/vendor/bin/hbtp_daemon
-#    class main
-#    user system
-#    group system
-#    disabled
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd

@@ -8,7 +8,15 @@ DEVICE_PATH := device/motorola/deen
 
 BOARD_VENDOR := motorola
 
-# Platform
+# A/B updater
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vendor
+
+# Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
@@ -23,28 +31,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOOTLOADER_BOARD_NAME := msm8953
-TARGET_BOARD_PLATFORM := msm8953
-
-BUILD_BROKEN_DUP_RULES := true
-
-# A/B updater
-AB_OTA_UPDATER := true
-
-AB_OTA_PARTITIONS += \
-    boot \
-    system \
-    vendor
-
 # Audio
-BOARD_USES_ALSA_AUDIO := true
-BOARD_SUPPORTS_SOUND_TRIGGER_HAL := true
-DTS_CODEC_M_ := false
-MM_AUDIO_ENABLED_FTM := true
-MM_AUDIO_ENABLED_SAFX := true
-TARGET_USES_QCOM_MM_AUDIO := true
-
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
 AUDIO_FEATURE_ENABLED_COMPRESS_CAPTURE := false
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
@@ -87,11 +74,25 @@ AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
 AUDIO_FEATURE_ENABLED_RAS := true
 AUDIO_FEATURE_ENABLED_PERF_HINTS := true
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
+BOARD_USES_ALSA_AUDIO := true
+BOARD_SUPPORTS_SOUND_TRIGGER_HAL := true
+DTS_CODEC_M_ := false
+MM_AUDIO_ENABLED_FTM := true
+MM_AUDIO_ENABLED_SAFX := true
+TARGET_USES_QCOM_MM_AUDIO := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/configs/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
+
+# Bootloader / Platform
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOOTLOADER_BOARD_NAME := msm8953
+TARGET_BOARD_PLATFORM := msm8953
+
+# Build
+BUILD_BROKEN_DUP_RULES := true
 
 # Camera
 USE_CAMERA_STUB := true
@@ -105,52 +106,52 @@ TARGET_DISABLE_POSTRENDER_CLEANUP := true
 TARGET_USES_ION := true
 TARGET_USES_HWC2 := true
 TARGET_USES_GRALLOC1 := true
+TARGET_SCREEN_DENSITY := 300
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
+
+# Filesystem
+TARGET_FS_CONFIG_GEN := \
+    $(DEVICE_PATH)/configs/filesystem/config.fs \
+    $(DEVICE_PATH)/configs/filesystem/mot_aids.fs
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 LOC_HIDL_VERSION := 3.0
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-TARGET_FS_CONFIG_GEN += \
-    $(DEVICE_PATH)/config.fs \
-    $(DEVICE_PATH)/mot_aids.fs
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_deen
 TARGET_RECOVERY_DEVICE_MODULES := libinit_deen
 
 # Kernel
-BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom ehci-hcd.park=3 lpm_levels.sleep_disabled=1
-BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci androidboot.usbconfigfs=true
-BOARD_KERNEL_CMDLINE += loop.max_part=7
-BOARD_KERNEL_CMDLINE += androidboot.veritymode=eio
+BOARD_BOOT_HEADER_VERSION := 1
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_PAGESIZE :=  2048
-BOARD_KERNEL_OFFSET := 0x00008000
+
+BOARD_KERNEL_CMDLINE += \
+    androidboot.bootdevice=7824900.sdhci \
+    androidboot.hardware=qcom \
+    androidboot.usbconfigfs=true \
+    androidboot.veritymode=eio \
+    ehci-hcd.park=3 \
+    loop.max_part=7 \
+    lpm_levels.sleep_disabled=1
+
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_KERNEL_PAGESIZE :=  2048
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/motorola/deen
 TARGET_KERNEL_CONFIG := deen_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/deen
 TARGET_KERNEL_VERSION := 3.18
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
     MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
-
-# Display
-TARGET_SCREEN_DENSITY := 300
-
-# Kernel
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
-
-# Declare boot header
-BOARD_BOOT_HEADER_VERSION := 1
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -159,20 +160,14 @@ TARGET_PROVIDES_LIBLIGHT := true
 BOARD_NFC_CHIPSET := pn553
 
 # Partitions
-BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864        #    65536 * 1024 mmcblk0p40
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2684354560    #  2621440 * 1024 mmcblk0p60
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 55104748544 # 53813231 * 1024 mmcblk0p54
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2684354560    #  2621440 * 1024 mmcblk0p60
 BOARD_VENDORIMAGE_PARTITION_SIZE := 536870912    #   524288 * 1024 mmcblk0p58
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_USES_RECOVERY_AS_BOOT := true
-TARGET_NO_RECOVERY := true
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
-BOARD_ROOT_EXTRA_SYMLINKS := \
-    /mnt/vendor/persist:/persist
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
@@ -183,17 +178,23 @@ TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# Recovery
+BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 CUSTOM_APNS_FILE := $(DEVICE_PATH)/configs/sprint_apns.xml
 
-# Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
-
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := persist
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /mnt/vendor/persist:/persist
 
-# Vendor Security Patch Level
+# Security Patch Level
 VENDOR_SECURITY_PATCH := 2021-10-01
 
 # SELinux
@@ -220,3 +221,6 @@ WIFI_DRIVER_FW_PATH_AP  := "ap"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
+
+# Inherit from the proprietary version
+include vendor/motorola/deen/BoardConfigVendor.mk
