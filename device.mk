@@ -341,6 +341,7 @@ PRODUCT_PACKAGES += \
 
 # Prebuilt packages
 PRODUCT_PACKAGES += \
+    SimpleGallery \
     ViaBrowser
 
 # QCOM

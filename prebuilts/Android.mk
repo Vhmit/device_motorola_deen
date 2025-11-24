@@ -11,6 +11,16 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := SimpleGallery
+LOCAL_SRC_FILES := SimpleGallery.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_OVERRIDES_PACKAGES := Gallery Gallery2 Glimpse Glimpse_prebuilt
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := ViaBrowser
 LOCAL_SRC_FILES := via-release.apk
 LOCAL_MODULE_CLASS := APPS
