@@ -204,11 +204,6 @@ on post-fs-data
     mkdir /data/vendor/.fps 0770 system oem_5015
 
 on boot
-    # MOTO, NJH348, IKHALFMWK-1864, change system max tcp buffer sizes based on RAT changes
-    # Define system changable TCP buffer max values
-    chown system system /proc/sys/net/core/rmem_max
-    chown system system /proc/sys/net/core/wmem_max
-
     # Change ownership and permission for leds backlight
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/charging/brightness
@@ -267,7 +262,6 @@ on charger
     trigger moto-charger
     class_stop main
     class_stop late_start
-
 
 # from P onwards aplogd cannot read vold.post_fs_data_done so a new property
 # shall be used to allow aplogd checking if FBE has finished /data decryption
@@ -328,4 +322,3 @@ on property:vendor.wifi.station=true
 
 on property:vendor.wifi.station=false
     write /sys/module/wlan/parameters/sar_sta disabled
-
