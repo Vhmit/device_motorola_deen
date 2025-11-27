@@ -88,6 +88,9 @@ ro.hardware.keystore_desede=true
 # OEM Unlock reporting
 ro.oem_unlock_supported=1
 
+# Perf
+ro.vendor.extension_library=libqti-perfd-client.so
+
 # Radio
 persist.vendor.radio.lte_vrte_ltd=1
 persist.vendor.radio.enable_temp_dds=true
