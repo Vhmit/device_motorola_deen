@@ -2,3 +2,4 @@ type adspd_device, dev_type;
 type isdbt_device, dev_type;
 type laser_device, dev_type;
 type fingerprint_device, dev_type;
+type custom_block_device, dev_type;

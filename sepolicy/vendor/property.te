@@ -5,3 +5,6 @@ type hwrev_prop, property_type;
 
 # wlan-vendor prop
 type vendor_wifi_prop, property_type;
+
+# perf
+type vendor_perf_prop, property_type;
