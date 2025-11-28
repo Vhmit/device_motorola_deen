@@ -17,6 +17,9 @@ $(call inherit-product, vendor/lineage/config/lineage_audio.mk)
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Disable blur with patches
+TARGET_DISABLE_BLUR := true
+
 # Device Identifiers
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := deen
