@@ -59,6 +59,9 @@ persist.vendor.dpm.feature=0
 ril.subscription.types=NV,RUIM
 telephony.lteOnCdmaDevice=1
 
+# Time
+persist.timed.enable=true
+
 # Play store
 ro.com.google.clientidbase.am=android-motorola
 ro.com.google.clientidbase.gmm=android-motorola

@@ -33,6 +33,3 @@ persist.vendor.ims.vt.enableadb=3
 
 # Recovery
 ro.recovery.ui.blank_unblank_on_init=true
-
-# Time daemon
-persist.vendor.delta_time.enable=true
