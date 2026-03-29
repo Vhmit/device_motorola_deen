@@ -60,6 +60,9 @@ telephony.lteOnCdmaDevice=1
 # (b/183612348): Enable skia reduceOpsTaskSplitting
 renderthread.skia.reduceopstasksplitting=true
 
+# Time
+persist.timed.enable=true
+
 # Play store
 ro.com.google.clientidbase.am=android-motorola
 ro.com.google.clientidbase.gmm=android-motorola
