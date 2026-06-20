@@ -54,8 +54,12 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+    	# Load libprocessgroup
+        vendor/lib/hw/audio.primary.msm8953.so)
+            "${PATCHELF}" --replace-needed libcutils.so libprocessgroup.so "${2}"
+            ;;
         # Camera shim
-        system_ext/lib64/lib-imscamera.so | system_ext/lib64/lib-imsvideocodec.so | system_ext/lib/lib-imscamera.so | system_ext/lib/lib-imsvideocodec.so | vendor/lib/libmot_gpu_mapper.so)
+        product/lib/lib-imscamera.so | product/lib/lib-imsvideocodec.so | product/lib64/lib-imscamera.so)
             for LIBGUI_SHIM in $(grep -L "libgui_shim.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libgui_shim.so" "${LIBGUI_SHIM}"
             done
@@ -70,10 +74,7 @@ function blob_fixup() {
             sed -i "s/ro.product.manufacturer/ro.product.nopefacturer/" "${2}"
             ;;
         # Wrap libgui_vendor into libwui
-        vendor/lib/libmot_gpu_mapper.so)
-            sed -i "s/libgui/libwui/" "${2}"
-            ;;
-        vendor/lib/libmmcamera_vstab_module.so)
+        vendor/lib/libmot_gpu_mapper.so | vendor/lib/libmmcamera_vstab_module.so)
             sed -i "s/libgui/libwui/" "${2}"
             ;;
         # Fix xml version
@@ -86,12 +87,6 @@ function blob_fixup() {
                 "${PATCHELF}" --add-needed "libcutils_shim.so" "$LIBCUTILS_SHIM"
             done
 	    ;;
-        # qsap shim
-        vendor/lib64/libmdmcutback.so)
-            for  LIBQSAP_SHIM in $(grep -L "libqsap_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libqsap_shim.so" "$LIBQSAP_SHIM"
-            done
-            ;;
         # memset shim
         vendor/bin/charge_only_mode)
             for  LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "${2}"); do

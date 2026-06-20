@@ -121,7 +121,7 @@ vendor/lib/libmmjpeg.so
 vendor/lib/libmmjpeg_interface.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libmmqjpeg_codec.so
-vendor/lib/libmot_gpu_mapper.so
+vendor/lib/libmot_gpu_mapper.so|ff93f05ef93504ca395126186ed0c7ea360a8071
 vendor/lib/liboptizoom.so
 vendor/lib/libqomx_core.so
 vendor/lib/libqomx_jpegdec.so
@@ -296,7 +296,7 @@ vendor/lib/libmmcamera2_is.so
 vendor/lib/libmmcamera2_isp_modules.so
 vendor/lib/libmmcamera2_mct.so
 vendor/lib/libmmcamera2_mct_shimlayer.so
-vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_pproc_modules.so|0356dc74bcc3075d700a31b3f7634a66f2fc2905
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_modules.so
@@ -372,7 +372,7 @@ vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_trueportrait_lib.so
 vendor/lib/libmmcamera_ubifocus_lib.so
-vendor/lib/libmmcamera_vstab_module.so
+vendor/lib/libmmcamera_vstab_module.so|f2db7c3441cd3e7d6f52a11310ef4f4904b54b10
 vendor/lib64/libmmcamera2_frame_algorithm.so
 vendor/lib64/libmmcamera2_is.so
 vendor/lib64/libmmcamera2_stats_algorithm.so
@@ -381,8 +381,8 @@ vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 
 # CNE
-product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
-product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
+product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|75e8a824d368cd4172985c884796381327d950da
+product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml|620c9fa0047bb681e918af2d1e7a98c648f45fb7
 product/framework/vendor.qti.data.factory-V1.0-java.jar
 product/framework/vendor.qti.data.factory-V2.0-java.jar
 product/framework/vendor.qti.hardware.data.connection-V1.0-java.jar
@@ -479,10 +479,10 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 # DRM - Widevine
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
-vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/mediadrm/libwvdrmengine.so|6995417a210e76c0784c53d6c64c99935e8967d5
 vendor/lib/liboemcrypto.so
 vendor/lib64/libwvhidl.so
-vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/lib64/mediadrm/libwvdrmengine.so|09666b8389214db48079958cdccfd027de92476e
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/libcpion.so
@@ -653,7 +653,7 @@ vendor/lib64/libsdedrm.so|fe62b1ccc1a815b9ceea1807734c11b9c89fbcca
 vendor/lib64/libadreno_utils.so|b46bdecaef58fbf040b7a472d54ad19b6b34b26d
 vendor/lib64/libbccQTI.so|42fdea81ea505ccadbf6d24af7ba37cf83760391
 vendor/lib64/libC2D2.so|802802ac7ce0bb8bfc6918449a89ec820c6cfd53
-vendor/lib64/libc2d30_bltlib.so|f308185ec20049368c6f417ebeed3e6d84e26e2f
+vendor/lib64/libc2d30_bltlib.so|1a82f396d27a6ded231eb219193f25e9f49bef40
 vendor/lib64/libCB.so|f14a760c8ceec7a47d32feb7f92cc970a6c68edb
 vendor/lib64/libgsl.so|22403f25e6cd2ba3ea4dd3451048f7c8e24d833b
 vendor/lib64/libhdr_tm.so|208b172959c1a12c008b49959080500fc2682dc1
@@ -692,14 +692,14 @@ vendor/lib64/libscalar.so|2887ceaf08f1c17fffe13038168d48dcb442f0cc
 vendor/lib64/libtinyxml2_1.so|70942325afdd14eedcf11b3fbbfbc3d98f42f8dc
 
 # Graphics - (SDM) - from deen_sprout - 10-QPK30.51-bffa2-release-keys
-vendor/lib/libsdm-color.so|fa3f8c0062d474fdf6960fcbcc3bf21a5c3fd594
+vendor/lib/libsdm-color.so|fa3feba972c1076c3055367c969212df5e0e4a90
 vendor/lib/libsdm-diag.so|46b5c2d6fab1e655efde1657b2e51dc00c00b763
 -vendor/lib/libsdm-disp-vndapis.so|9bd99e0024f5abcc285f64aadea8725556f16789
-vendor/lib/libsdmextension.so|b6a2100c733b7a5c4688bb9bcae581461ada70f3
-vendor/lib64/libsdm-color.so|993dc946c4aa439280527c13798938c51dd9dee7
+vendor/lib/libsdmextension.so|ed08025c0bd11445f0a0489cfdca7831a2b8b478
+vendor/lib64/libsdm-color.so|335415c8f85a1e2e102667c24dffb166e7b08e75
 vendor/lib64/libsdm-diag.so|87373a043267b9b3bb923931a910119a9deb425f
 -vendor/lib64/libsdm-disp-vndapis.so|b1dede9efa81e8d0374343612ad7ad0d967e8e29
-vendor/lib64/libsdmextension.so|47b7fcfb790df4417654c566af1a8a74d4bf3e2f
+vendor/lib64/libsdmextension.so|6184043b163c502e3b89dbc216421f096a01d5b3
 
 # Graphics (vulkan) - from river:10/QPUS30.52-33-11
 vendor/lib/hw/vulkan.msm8953.so|cc458e1c8eccb85960c0c5c5d490733e3c32cc93
@@ -789,7 +789,7 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libpn553_fw.so
 
 # Offmode charging
-vendor/bin/charge_only_mode
+vendor/bin/charge_only_mode|2da6abfce0c78d6a0464889b8753e51e6ac0f5bd
 vendor/bin/hvdcp_opti
 
 # Perf
@@ -955,7 +955,7 @@ vendor/lib64/libqcrilFramework.so
 -vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
-vendor/lib64/libril-qc-hal-qmi.so
+vendor/lib64/libril-qc-hal-qmi.so|a2359a2c0e3de2159f41b74cf456d807fa388900
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-radioconfig.so
@@ -1013,8 +1013,8 @@ product/lib/com.qualcomm.qti.imscmservice@2.1.so
 product/lib/com.qualcomm.qti.imscmservice@2.2.so
 product/lib/com.qualcomm.qti.uceservice@2.0.so
 product/lib/com.qualcomm.qti.uceservice@2.1.so
-product/lib/lib-imscamera.so
-product/lib/lib-imsvideocodec.so
+product/lib/lib-imscamera.so|9d79aa890ecf68ae6cb97e774088c696f2e0507c
+product/lib/lib-imsvideocodec.so|dce04cf399f5b2389f9927283f0262b2da5d0584
 product/lib/lib-imsvt.so
 product/lib/lib-imsvtcore.so
 product/lib/lib-imsvtextutils.so
@@ -1032,7 +1032,7 @@ product/lib64/com.qualcomm.qti.imscmservice@2.1.so
 product/lib64/com.qualcomm.qti.imscmservice@2.2.so
 product/lib64/com.qualcomm.qti.uceservice@2.0.so
 product/lib64/com.qualcomm.qti.uceservice@2.1.so
-product/lib64/lib-imscamera.so
+product/lib64/lib-imscamera.so|06b07c842c48bd369e24e0dde19c2a523b8c5b8a
 product/lib64/lib-imsvideocodec.so
 product/lib64/lib-imsvt.so
 product/lib64/lib-imsvtcore.so
@@ -1101,18 +1101,18 @@ vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so
 
 # Sensors - from deen_sprout - 10-QPK30.51-bffa2-release-keys
-vendor/bin/capsense_reset|95cf79fc1dfdc7d95150fbe2c0d17c40f736b9a5
-vendor/bin/sensors.qti|d236800766eb407c65b04ee952e3ae867b9c4819
-vendor/lib/libsensor_reg.so|f81737c08759acc8add3ce87160f1ae24263546d
-vendor/lib/libsensor1.so|637aa4ec588533a3dcddb6ed95a7434f1f6b7d59
-vendor/lib/sensor_calibrate.so|53353469aa930cd298d6ff4a1981cc7cebb03d5e
-vendor/lib/sensors.rp.so|e35005a9a8e0aa574bb116490ff0240eb8b9a094
-vendor/lib/sensors.ssc.so|e69b474fd6e94e93b6684935455cc6c9ef5c2192
-vendor/lib64/libsensor_reg.so|fc6d0f4021f01ba0d0c2406e7a58dd1af4d21b19
-vendor/lib64/libsensor1.so|74faeeb9d8679fa1260bbc0cd7aa32cc859204cd
-vendor/lib64/sensor_calibrate.so|47f475a83d6eb59f45a810299116893c91acf79e
-vendor/lib64/sensors.rp.so|c792a29071b6e8521e205b0d0e87a96401407618
-vendor/lib64/sensors.ssc.so|761d2b907b60176a8ef77e7f9296337b936a5351
+vendor/bin/capsense_reset|f31dcbf5d4fc68ba5a2f5b243ec15d6b9c541d57
+vendor/bin/sensors.qti|556ba4759d6ffa19976a864cd2d06ed8af043273
+vendor/lib/libsensor_reg.so|ab0c03ec7b16819ef60a1c0543b8784a7b537319
+vendor/lib/libsensor1.so|259beed19f96d764a12fd97249fcebb3577f7bff
+vendor/lib/sensor_calibrate.so|7e865e6fb4a9f562df9feeb987f49bc58f667a52
+vendor/lib/sensors.rp.so|a30e67a65618bfa6795194da8130b78939bc16b7
+vendor/lib/sensors.ssc.so|2ba7cb1f5ada5bf3cf39693d63e01a21b7217616
+vendor/lib64/libsensor_reg.so|0a77885cd70f903248a58d4e4a9c4ea0cefdb114
+vendor/lib64/libsensor1.so|46f181c0bd3be40637cf64a5e358546be450632d
+vendor/lib64/sensor_calibrate.so|cef2fbc5f41e1fa3c797998c269eea3bdbbb9658
+vendor/lib64/sensors.rp.so|f08b43ba5261cff1284848cb9e6b95b5fbf215a5
+vendor/lib64/sensors.ssc.so|fcd27abb9f473971a59b1d54d5b57981ddce2c61
 
 # Thermal
 vendor/bin/thermal-engine
