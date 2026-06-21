@@ -68,10 +68,6 @@ vendor.display.disable_rotator_downscale=1
 debug.renderengine.backend=threaded
 vendor.display.use_smooth_motion=1 
 
-# Dolby
-persist.vendor.audio_fx.current=dolby
-ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1
-
 # DRM
 drm.service.enabled=true
 
@@ -88,9 +84,6 @@ ro.hardware.vulkan=msm8953
 
 # Keystore
 ro.hardware.keystore_desede=true
-
-# media
-debug.stagefright.omx_default_rank.sw-audio=16
 
 # OEM Unlock reporting
 ro.oem_unlock_supported=1
