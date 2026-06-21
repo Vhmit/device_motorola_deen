@@ -62,7 +62,6 @@ vendor.display.disable_rotator_downscale=1
 
 # Display
 debug.renderengine.backend=threaded
-vendor.display.use_smooth_motion=1 
 
 # DRM
 drm.service.enabled=true
