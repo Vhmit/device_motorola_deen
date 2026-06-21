@@ -25,14 +25,6 @@ on boot
    # change permission for capsensor
    chown system system /sys/class/capsense/reset
 
-
-    # Change permission for fingerprint sensor
-    chown system oem_5004 /sys/devices/platform/soc/soc:fpc_fpc1020/nav
-    chown system oem_5004 /sys/devices/platform/soc/soc:fpc_fpc1020/dev_enable
-    chown system oem_5004 /sys/devices/platform/soc/soc:fpc_fpc1020/irq
-    chown system oem_5004 /sys/devices/platform/soc/soc:fpc_fpc1020/irq_cnt
-    chmod 0440 /sys/devices/platform/soc/soc:fpc_fpc1020/irq_cnt
-
    # Change the ownership of display TE files for tcmds
    chown root oem_5004 /sys/class/graphics/fb0/te_test
    chown root oem_5004 /sys/class/graphics/fb0/te_enable
