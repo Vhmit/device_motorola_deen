@@ -13,14 +13,22 @@ PRODUCT_COMPRESSED_APEX := false
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
-    NoCutoutOverlay
+    CarrierConfigRes \
+    FrameworksRes \
+    NoCutoutOverlay \
+    SettingsRes \
+    SystemUIRes \
+    TelephonyRes \
+    TetheringConfigOverlay \
+    WifiOverlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
 
 # A/B updater
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -448,10 +456,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Tethering
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
@@ -507,7 +511,6 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wcnss_service \
     wificond \
-    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
