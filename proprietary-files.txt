@@ -1082,19 +1082,21 @@ vendor/lib64/vendor.qti.imsrtpservice@2.0.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so
 
-# Sensors - from deen_sprout - 10-QPK30.51-bffa2-release-keys
+# Sensors - from river_retail - 10-QPUS30.52-33-11
 vendor/bin/capsense_reset|f31dcbf5d4fc68ba5a2f5b243ec15d6b9c541d57
-vendor/bin/sensors.qti|556ba4759d6ffa19976a864cd2d06ed8af043273
-vendor/lib/libsensor_reg.so|ab0c03ec7b16819ef60a1c0543b8784a7b537319
-vendor/lib/libsensor1.so|259beed19f96d764a12fd97249fcebb3577f7bff
-vendor/lib/sensor_calibrate.so|7e865e6fb4a9f562df9feeb987f49bc58f667a52
+vendor/bin/sensors.qti|298c8f546528cde87c901745984229e42a735003
+vendor/lib/libsensor1.so|764e9f6000b315b0639b88b7dc9d14131228e559
+vendor/lib/libsensor_reg.so|4bcd8e4356107095888da3424953457559615324
+vendor/lib/sensor_calibrate.so|3822d22434267918172200aba47b3409f8ffe4bc
 vendor/lib/sensors.rp.so|a30e67a65618bfa6795194da8130b78939bc16b7
-vendor/lib/sensors.ssc.so|2ba7cb1f5ada5bf3cf39693d63e01a21b7217616
-vendor/lib64/libsensor_reg.so|0a77885cd70f903248a58d4e4a9c4ea0cefdb114
-vendor/lib64/libsensor1.so|46f181c0bd3be40637cf64a5e358546be450632d
-vendor/lib64/sensor_calibrate.so|cef2fbc5f41e1fa3c797998c269eea3bdbbb9658
+vendor/lib64/libsensor1.so|3112cc0dc37086a0c17572fd8dc854e162099175
+vendor/lib64/libsensor_reg.so|abd401710afb40308ce4c6adf4d91ca5f81c8cfe
+vendor/lib64/sensor_calibrate.so|7e94b30c2904bffa30f1ea25edb8c735aad7489f
 vendor/lib64/sensors.rp.so|f08b43ba5261cff1284848cb9e6b95b5fbf215a5
-vendor/lib64/sensors.ssc.so|fcd27abb9f473971a59b1d54d5b57981ddce2c61
+
+# Sensors - from lake_retail - 10-QPW30.61-18
+vendor/lib/sensors.ssc.so|8d311851599fd687fff7ba3a13faecd87a04b4e7
+vendor/lib64/sensors.ssc.so|d3471c08181b097b92d35683d260e38358d7a13a
 
 # Thermal
 vendor/bin/thermal-engine
