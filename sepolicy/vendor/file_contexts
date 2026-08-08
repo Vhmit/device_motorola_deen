@@ -1,9 +1,5 @@
 # Dev block nodes for eMMC
 /dev/block/platform/soc/7824900\.sdhci/by-name/persist2          u:object_r:persist_block_device:s0
-
-# Dolby
-/vendor/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                     u:object_r:hal_dms_default_exec:s0
-
 # EMMC A/B partitions
 /dev/block/platform/soc/7824900\.sdhci/by-name/dto_[ab]          u:object_r:custom_ab_block_device:s0
 /dev/block/platform/soc/7824900\.sdhci/by-name/fsg_[ab]          u:object_r:modem_efs_partition_device:s0
@@ -56,7 +52,6 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-ets   u:object_r:hal_fingerprint_fpc_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.msm8953                u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.msm8953                  u:object_r:hal_lineage_touch_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                     u:object_r:hal_dms_default_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.(laser|usb)\.sh                          u:object_r:qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.qcom\.power\.sh                               u:object_r:qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/perfd                                               u:object_r:perfd_exec:s0
