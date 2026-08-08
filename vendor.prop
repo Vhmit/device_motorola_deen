@@ -75,6 +75,17 @@ ro.hardware.vulkan=msm8953
 # Keystore
 ro.hardware.keystore_desede=true
 
+# Media
+vendor.mm.enable.qcom_parser=33559074
+vendor.vidc.disable.split.mode=1
+vendor.vidc.enc.disable.pq=true
+vendor.video.disable.ubwc=1
+
+# OMX
+debug.stagefright.omx_default_rank.sw-audio=1
+debug.stagefright.omx_default_rank=0
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
 # OEM Unlock reporting
 ro.oem_unlock_supported=1
 

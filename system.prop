@@ -44,6 +44,14 @@ pm.dexopt.bg-dexopt=everything
 # Display
 ro.sf.hwc_set_default_colormode=true
 
+# Media
+media.msm8956hw=0
+mm.enable.smoothstreaming=true
+mmp.enable.3g2=true
+media.aac_51_output_enabled=true
+av.debug.disable.pers.cache=1
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+
 # Radio
 DEVICE_PROVISIONED=1
 persist.vendor.cne.feature=1
