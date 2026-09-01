@@ -83,9 +83,6 @@ vendor.camera.skip_unconfigure.packagelist		u:object_r:camera_prop:s0
 pdaf.tune.enable		u:object_r:camera_prop:s0
 video.disable.ubwc		u:object_r:camera_prop:s0
 
-vendor.perf.           u:object_r:vendor_perf_prop:s0
-ro.vendor.perf.        u:object_r:vendor_perf_prop:s0
-
 # Radio
 ro.build.motfactory u:object_r:vendor_radio_prop:s0
 ro.build.vendorprefix u:object_r:vendor_radio_prop:s0
