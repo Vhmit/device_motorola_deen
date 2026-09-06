@@ -72,9 +72,6 @@ ro.apk_verity.mode=2
 ro.hardware.egl=adreno
 ro.hardware.vulkan=msm8953
 
-# Keystore
-ro.hardware.keystore_desede=true
-
 # Media
 vendor.mm.enable.qcom_parser=33559074
 vendor.vidc.disable.split.mode=1
